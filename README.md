@@ -13,5 +13,5 @@ Chatbotul poate fi accesat printr-un terminal sau o interfață web.
 ## ⚙️ Funcționalități cheie
 
 - 🔍 Căutare semantică în documente cu Azure Search
-- 💬 Răspunsuri generate de GPT-4 pe baza contextuluin și documentelor
+- 💬 Răspunsuri generate de GPT-4 pe baza contextului și documentelor
 - 🌐 Interfață web pentru interacțiune
