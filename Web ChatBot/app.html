@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Întrebări și Răspunsuri</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    #response {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      min-height: 100px;
+    }
+    #questionInput {
+      width: 80%;
+      padding: 10px;
+      margin: 10px auto;
+      display: block;
+      font-size: 16px;
+    }
+    #askButton {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    #askButton:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Întrebări și Răspunsuri</h1>
+  
+  <input type="text" id="questionInput" placeholder="Scrie întrebarea ta aici..." />
+  <button id="askButton">Trimite Întrebarea</button>
+  
+  <div id="response">Aici va apărea răspunsul...</div>
+
+  <script>
+    document.getElementById("askButton").addEventListener("click", async function() {
+      const question = document.getElementById("questionInput").value;
+      if (!question) {
+        alert("Te rog, scrie o întrebare!");
+        return;
+      }
+      
+      // Trimite întrebarea către backend
+      const response = await fetch("/ask-question", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ query: question })
+      });
+
+      const data = await response.json();
+      document.getElementById("response").innerText = data.answer || "Nu am suficiente informații pentru a răspunde la întrebare.";
+    });
+  </script>
+</body>
+</html> 

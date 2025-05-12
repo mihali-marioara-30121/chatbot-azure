@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "*": [
+                "types/*"
+            ]
+        },
+        "resolveJsonModule": true,
+        "module": "commonjs",
+        "target": "ESNext",
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "sourceMap": false,
+    },
+    "compileOnSave": true,
+    "include": [
+        "**/*"
+    ],
+    "exclude": [
+        "node_modules",
+    ]
+}
