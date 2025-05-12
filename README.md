@@ -8,7 +8,7 @@ Chatbotul poate fi accesat printr-un terminal sau o interfață web.
 - **Azure Blob Storage** – pentru stocarea documentelor (.docx, .pdf etc.)
 - **Azure Cognitive Search** – pentru indexare și căutare semantică
 - **OpenAI GPT-4 (Azure OpenAI)** – pentru generarea de răspunsuri conversaționale
-- **JavaScript/Typescript** ,**HTML**, **CSS** – pentru interfața web
+- **JavaScript/TypeScript** ,**HTML**, **CSS** – pentru interfața web
 
 ## ⚙️ Funcționalități cheie
 
